@@ -1,8 +1,8 @@
 {
-  "name": "typescript-action",
+  "name": "Taplo Action",
   "version": "0.0.0",
   "private": true,
-  "description": "TypeScript template action",
+  "description": "GitHub Action to run Taplo",
   "main": "lib/main.js",
   "scripts": {
     "build": "tsc",
@@ -15,14 +15,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/actions/typescript-action.git"
+    "url": "git+https://github.com/hituzi-no-sippo/taplo-action.git"
   },
   "keywords": [
     "actions",
-    "node",
-    "setup"
+    "TOML",
+    "Linter",
+    "Formatter",
+    "Taplo"
   ],
-  "author": "",
+  "author": "hituzi no sippo",
   "license": "MIT",
   "dependencies": {
     "@actions/core": "^1.9.0"

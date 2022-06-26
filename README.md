@@ -11,9 +11,30 @@ Any Taplo command can then be run.
 
 ```yaml
 - uses: actions/checkout@v3
-- uses: hituzi-no-sippo/taplo-action@1.0.0
+- uses: hituzi-no-sippo/taplo-action@v1.0.0
   with:
+    token: ${{ secrets.GITHUB_TOKEN }}
+    # CLI arguments
+    args: lint
+    # Specify `version` to pin a specific version, otherwise action will always use latest version/automatically update
 ```
+
+### Parameters
+
+#### `token` (Required)
+
+GitHub token.
+Required since the binary is downloaded from GitHub releases (to speed download)
+
+#### `args` (Required)
+
+The arguments to pass to the Taplo binary
+
+#### `version` (Optional)
+
+The version of Taplo to use. Follows semver syntax.
+If not specified, installs the latest release.
+**It is recommended to pin your version so that updates to Taplo don't lead to unwanted changes in the action without explicitly updating.**
 
 Based off [JohnnyMorganz/stylua-action](https://github.com/JohnnyMorganz/stylua-action),
 licensed under [MIT](https://github.com/Roblox/setup-foreman/blob/master/LICENSE.txt)

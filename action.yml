@@ -2,10 +2,14 @@ name: 'Taplo'
 description: 'GitHub Action to run Taplo. Taplo is TOML formatter and linter'
 author: 'hituzi no sippo'
 inputs:
-  milliseconds: # change this
+  token:
+    description: 'The GITHUB_SECRET token'
     required: true
-    description: 'input description here'
-    default: 'default value if applicable'
+  args:
+    description: 'CLI Arguments to pass to StyLua'
+    required: true
+  version:
+    description: 'The version of StyLua to run'
 runs:
   using: 'node16'
   main: 'dist/index.js'
